@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar Libro</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Se crea nav de la App -->
+    <div class="topnav">
+      <a class="active" href="">Buscar tus Libros Agregados</a>
+      <a href="/">Inicio</a>
+      <a href="/buscar">Buscar</a>
+      <a href="/actualizar">Actualizar</a>
+      <a href="/eliminar">Eliminar</a>
+    </div>
+    <!-- Se crea seccion con imagen -->
+    <section class="seccionpage-img1"></section>
+    <!-- Se crea espacio para formulario -->
+    <div class="container-up">
+      <div class="container">
+        <div class="row col-card">
+          <div class="col-form cont-forms">
+            <div class="container-form">
+              <form method="post">
+                <label for="titulo">Título:</label>
+                <input
+                  type="text"
+                  class="line-input"
+                  id="titulo"
+                  name="titulo"
+                  required
+                /><br />
+                <button type="submit" class="btn-form">Buscar</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-form cont-text">
+            <div class="container">
+              <h1>Busca tus libros Agregados</h1>
+              <br />
+              <p>
+                "Explora tu biblioteca personal con facilidad. Encuentra tus
+                libros agregados al instante y sumérgete en las historias que
+                has atesorado. ¡Tu próxima lectura te espera a solo un clic de
+                distancia!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section></section>
+    <br />
+    <br />
+    <footer>
+      <p>
+        &copy; 2024 Proyecto Diplomado | Todos los derechos reservados |
+        Sebastian y Jhojan.
+      </p>
+    </footer>
+  </body>
+</html>

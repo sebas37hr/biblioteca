@@ -1,0 +1,311 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #0e1d26;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #a1a4a6;
+  color: #0e1d26;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #293940;
+  color: white;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d9d9d9;
+  margin: 0;
+  padding: 0;
+}
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-up {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -350px;
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tu diseño */
+  margin-top: -130px;
+}
+
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #f2f2f2;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #a1a4a6;
+  transform: scale(1.05);
+}
+
+.btn-form {
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #293940;
+  cursor: pointer;
+  width: 270px; /* Ancho deseado */
+  height: 40px; /* Alto deseado */
+  padding: 10px 20px; /* Ajusta el relleno según tus preferencias */
+  font-size: 17px; /* Tamaño de fuente opcional */
+}
+
+.card {
+  padding: 110px;
+  width: 10px; /* Ancho del cuadrado */
+  height: 100px; /* Altura del cuadrado */
+  background-color: #0e1d26; /* Color de fondo azul */
+  font-size: 20px;
+  text-align: center;
+  /*display: flex;  Hacer que el contenedor sea un contenedor flexible */
+  justify-content: center; /* Alinear horizontalmente el contenido al centro */
+  align-items: center; /* Alinear verticalmente el contenido al centro */
+}
+
+.line-input {
+  border: none;
+  background: #293940;
+  border-bottom: 3px solid #293940; /* Línea inferior como borde */
+  outline: none; /* Elimina el contorno predeterminado al hacer clic */
+  transition: border-color 0.3s; /* Efecto de transición para el cambio de color */
+  width: 100%;
+  color: #f2f2f2;
+  margin-bottom: 25px;
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+.line-input::placeholder {
+  color: #f2f2f2;
+  opacity: 0.5;
+}
+.line-input:focus::placeholder {
+  color: transparent; /* Hace que el texto del placeholder sea transparente cuando el campo de entrada tiene el foco */
+}
+
+/* Cambiar color al poner el cursor */
+.line-input:focus {
+  border-color: #d3d3c3; /* Cambia el color al poner el cursor */
+}
+
+.seccionpage-img1 {
+  padding-top: 8rem !important;
+  padding-bottom: 10rem !important;
+  background-image: url(/static/assest/img-seccion1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.title-1 {
+  font-size: 36px; /* Tamaño considerable del texto */
+  color: #d9d9d9; /* Color blanco del texto */
+  margin-top: 2px; /* Espacio superior */
+  margin-bottom: 10px; /* Espacio inferior */
+  margin-left: 3px; /* Espacio izquierdo */
+  position: absolute; /* Posicionamiento absoluto para el texto */
+  top: 30px; /* Alinear el texto en la parte superior del contenedor principal */
+  left: 30px; /* Alinear el texto en la esquina izquierda del contenedor principal */
+}
+p {
+  font-family: "Roboto Condensed", sans-serif; /* Cambia 'Roboto Condensed' por el nombre de la fuente cool que desees */
+  text-align: left; /* Justifica el texto a la izquierda */
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: auto; /* Centra horizontalmente */
+  margin-left: auto; /* Centra horizontalmente */
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin-top: -7%;
+  margin-left: 10px;
+}
+
+.col-form {
+  flex: 0 0 auto;
+  width: 600px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  margin-left: 0px;
+}
+.col-card {
+  display: flex; /* Hacer que el contenedor sea un contenedor flexible */
+  justify-content: center; /* Alinear horizontalmente el contenido al centro */
+  align-items: center; /* Alinear verticalmente el contenido al centro */
+}
+
+.icon-add {
+  /* Estilos del icono */
+  background-image: url("/static/assest/agregar.png");
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-position: center;
+}
+.icon-search {
+  /* Estilos del icono */
+  background-image: url("/static/assest/busqueda.png");
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-position: center;
+}
+.icon-update {
+  /* Estilos del icono */
+  background-image: url("/static/assest/flecha-de-carga.png");
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-position: center;
+}
+
+.icon-delete {
+  /* Estilos del icono */
+  background-image: url("/static/assest/basura.png");
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-position: center;
+}
+
+.col-md-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+
+.col-md-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+.cont-forms {
+  margin-right: -10px;
+  border-radius: 10px;
+  background-color: #0e1d26;
+  color: #d9d9d9; /* Color del texto */
+  position: relative;
+  box-shadow: 0px 0px 10px #293940; /* Ajusta los valores según el tamaño y la opacidad de la sombra */
+}
+
+.cont-text {
+  padding: 70px; /* Espaciado interno para el contenido */
+  width: 300px;
+  margin-left: 0%;
+  border-radius: 10px;
+  color: #d9d9d9; /* Color del texto */
+  background-color: #2f3742;
+  box-shadow: 0px 0px 10px #1d2938; /* Ajusta los valores según el tamaño y la opacidad de la sombra */
+  position: relative; /* Posicionamiento relativo para el contenido */
+}
+
+.seccion-form {
+  background: linear-gradient(to right, #0d0d0d, #bf1534);
+}
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+footer {
+  background-color: #0e1d26;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 450px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #293940;
+  color: #ffffff;
+  text-align: middle;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #0E1D26;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultados de la Búsqueda</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Se crea nav de la App -->
+    <div class="topnav">
+      <a class="active" href="">Eliminar Libros</a>
+      <a href="/">Inicio</a>
+      <a href="/buscar">Buscar</a>
+      <a href="/actualizar">Actualizar</a>
+      <a href="/eliminar">Eliminar</a>
+    </div>
+    <!-- Se crea seccion con imagen -->
+    <section class="seccionpage-img1"></section>
+
+    <div class="container-up">
+      <div class="container">
+        <div class="row col-card">
+          <div class="col-form cont-forms">
+            <div class="container">
+              <h1>Resultados de la Búsqueda</h1>
+              {% if resultados %}
+              <ul>
+                {% for libro in resultados %}
+                <li>{{ libro.titulo }} - {{ libro.autor }}</li>
+              </ul>
+              <button class="btn-form" onclick="window.location.href='/buscar'">
+                Buscar otro Libro
+              </button>
+            </div>
+          </div>
+          <div class="col-form cont-text">
+            <div class="container">
+              <h1>Adibina adivinador:</h1>
+              <br />
+              <p>el libro {{ libro.titulo }} {{libro.disponible}} se encuentra disponible</p>
+            </div>
+          </div>
+          {% endfor %} {% else %}
+          <div class="col-form cont-text">
+            <div class="container">
+              <h1>No hay nada</h1>
+              <br />
+              <p>:/</p>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

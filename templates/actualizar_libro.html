@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actualizar Libro</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Se crea nav de la App -->
+    <div class="topnav">
+      <a class="active" href="">Actualizar Libros</a>
+      <a href="/">Inicio</a>
+      <a href="/buscar">Buscar</a>
+      <a href="/actualizar">Actualizar</a>
+      <a href="/eliminar">Eliminar</a>
+    </div>
+    <!-- Se crea seccion con imagen -->
+    <section class="seccionpage-img1"></section>
+    <div class="container-up">
+      <div class="container">
+        <div class="row col-card">
+          <div class="col-form cont-forms">
+            <div class="container-form">
+              <form method="post">
+                <input
+                placeholder="Título"
+                type="text"
+                class="line-input"
+                id="titulo"
+                name="titulo"
+                required
+              /><br />
+              <input
+                placeholder="Editorial"
+                type="text"
+                class="line-input"
+                id="nueva_editorial"
+                name="nueva_editorial"
+                required
+              /><br />
+              <input
+                placeholder="Autor"
+                type="text"
+                class="line-input"
+                id="nuevo_autor"
+                name="nuevo_autor"
+                required
+              /><br />
+              
+              <input
+                placeholder="Versión"
+                type="text"
+                class="line-input"
+                id="nueva_version"
+                name="nueva_version"
+                required
+              /><br />
+              
+              <select id="disponible" class="line-input" name="disponible">
+                <option value="-" >Libro Disponible</option>
+                <option value="SI" >SI</option>
+                <option value="NO" >NO</option>
+              </select><br />
+              
+                <button class="btn-form" type="submit">Actualizar</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-form cont-text">
+            <div class="container">
+              <h1>Actualiza tus Libros</h1>
+              <br />
+              <p>
+                "Da vida nueva a tu biblioteca. Actualiza tus libros y dale un
+                impulso fresco a tu experiencia de lectura. ¡Descubre versiones
+                mejoradas de tus historias favoritas y abre tu mente a nuevos
+                horizontes literarios!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section></section>
+    <br />
+    <br />
+    <footer>
+      <p>
+        &copy; 2024 Proyecto Diplomado | Todos los derechos reservados |
+        Sebastian y Jhojan.
+      </p>
+    </footer>
+  </body>
+</html>

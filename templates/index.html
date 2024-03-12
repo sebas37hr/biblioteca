@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Gestión de Biblioteca</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Se crea nav de la App -->
+    <div class="topnav">
+      <a class="active" href="">Sistema de Gestión de Biblioteca</a>
+    </div>
+    <!-- Se crea un espacio de seccion para incorporar imargen -->
+    <section class="seccionpage-img1"></section>
+    <div class="container">
+      <div class="row col-card">
+        <button class="card col-5" onclick="window.location.href='/agregar'">
+          Agregar Libro<span class="icon-add"></span>
+        </button>
+        <button class="card col-5" onclick="window.location.href='/buscar'">
+          Buscar libro<span class="icon-search"></span>
+        </button>
+        <button class="card col-5" onclick="window.location.href='/actualizar'">
+          Actualizar libro<span class="icon-update"></span>
+        </button>
+        <button class="card col-5" onclick="window.location.href='/eliminar'">
+          Eliminar libro<span class="icon-delete"></span>
+        </button>
+      </div>
+      
+    </div>
+    <br>
+    <div class="container">
+      <h2 class="col-card">Tu lista de libros!</h2>
+      <div class="col-card">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Editorial</th>
+            <th>Autor</th>
+            <th>Versión</th>
+            <th>Disponibilidad</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for libro in libros %}
+          <tr class="alert" role="alert">
+            <td>{{ libro.titulo }}</td>
+            <td>{{ libro.editorial }}</td>
+            <td>{{ libro.autor }}</td>
+            <td>{{ libro.version }}</td>
+            <td>{{ libro.disponible }}</td>
+            <td>
+              <a href="#" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="fa fa-close"></i></span>
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+
+      </div>
+      
+    </div>
+    <section></section>
+    <br />
+    <br />
+    <footer>
+      <p>
+        &copy; 2024 Proyecto Diplomado | Todos los derechos reservados |
+        Sebastian y Jhojan.
+      </p>
+    </footer>
+  </body>
+</html>
